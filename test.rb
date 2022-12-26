@@ -68,12 +68,11 @@ class BookInStock
   attr_accessor :isbn, :price # สร้าง :isbn, :price เป็นตัวเเปรแบบ instance
 
   def initialize(isbn, price)
-    raise ArgumentError if isbn.empty? || price <= 0 #ใน isbn ไม่มีค่า หรื่อ price <= 0 run 
+    raise ArgumentError if isbn.empty? || price <= 0 #ใน isbn ไม่มีค่า หรื่อ price <= 0 set variable  isbn และ price
     @isbn = isbn
     @price = price
   end
 
   def price_as_string
-    "$%.2f" % price # price mod "$%.2f"
-  end
+    "$%.2f" % price # ruturn price .ให้เป็น form "$%.2f"
 end
